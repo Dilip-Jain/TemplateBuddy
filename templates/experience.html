@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../static/css/font-awesome.min.css">
 
     <title>Experience</title>
+
 </head>
 <body>
 
@@ -84,8 +85,9 @@
                             <div class="form-group col-md-6">
                             <label for="edate">End Date</label>
                             <input type="date" class="form-control addEdate end_dates_exp" id="edate">
+                            <hr>
+                            <p>Working*  <input type="checkbox" onclick = "disableFunc()" id="myCheck"> </p>
                             </div>
-
                         </div>
 
                         <!-- Description -->
@@ -143,8 +145,13 @@
                                     <div class="form-group col-md-6">
                                     <label for="edate">End Date</label>
                                     <input type="date" class="form-control addEdate end_dates_exp" id="edate" value="{{end_dates_exp[i]}}">
-                                    </div>
+                                    <hr>
+                                    <!-- <p>Working*  <input type="checkbox" onclick = "disableFunc()" id="myCheck"> </p> -->
+         
+         
+                                </div>
 
+                                  
                                 </div>
 
                                 <!-- Description -->
@@ -186,6 +193,19 @@
     <script src="../static/js/sweetalert.min.js"></script>
 
     <script src="../static/js/experience.js"></script>
+
+    <script>
+
+        function disableFunc() {
+            var checkBox = document.getElementById("myCheck");
+            if (checkBox.checked == true){
+                document.getElementById("edate").disabled = true;
+              } else {
+                document.getElementById("edate").disabled = false;
+              }            
+          }
+          
+    </script>
 
 </body>
 </html>
